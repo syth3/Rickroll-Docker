@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  webserver:
+    image: nginx:latest
+    ports:
+      - 80:80
+    restart: always
+    volumes:
+      - ./nginx/:/etc/nginx/conf.d/:ro
